@@ -41,4 +41,24 @@ Output: GCD(x,y)
 * return x
 
 ## Pseudocode Extended
-Input: positive integer
+Input: positive integers x and y
+Output: integers s and t
+* if (y<x)
+  * swap x and y
+* r = y mod x
+* d = y div x
+* save y,x,r,d distinctly as level 1
+* level = 1
+* while( r != 0)
+  * y = x
+  * x = r
+  * r = y mod x
+  * d = y div x
+  * count ++
+  * save y,x,r,d distinctly on each count
+* for i = level through 2
+  * x_i = y_(i-1) - d_(i-1) * x_(i-1)
+  * join like terms
+* find coefficients of original x and y
+  
+
